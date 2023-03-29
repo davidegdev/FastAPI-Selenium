@@ -14,7 +14,6 @@ class Msg(BaseModel):
     secret: str
 
 @app.get("/")
-
 async def root():
     return {"message": "Hello World. Welcome to FastAPI!"}
 
@@ -34,4 +33,6 @@ async def demo_post(inp: Msg, background_tasks: BackgroundTasks):
     return {"message": "Success, background task started"}
     
 
-
+# import uvicorn
+# if __name__ == "__main__":
+#     uvicorn.run(app, host="127.0.0.1", port=8000)
